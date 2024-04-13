@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -43,6 +44,10 @@ public class FrmColegio extends javax.swing.JFrame {
 
     public FrmColegio() {
         initComponents();
+        ImageIcon icono = new ImageIcon("C:/Users/Juan/Documents/AppColegio/Colegio/colegio.png"); 
+        setIconImage(icono.getImage());
+        this.setTitle("Colegio");
+        this.setLocationRelativeTo(null);
         listaEstudiante = new ArrayList();
         txtDocumento.setText("");
         txtNombre.setText("");
