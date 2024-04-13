@@ -73,6 +73,7 @@ public class FrmColegio extends javax.swing.JFrame {
         tableEstudiantesRegistrados = new javax.swing.JTable();
         btnExportar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -126,6 +127,13 @@ public class FrmColegio extends javax.swing.JFrame {
             }
         });
 
+        btnSalir.setText("SALIR");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -133,7 +141,6 @@ public class FrmColegio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,9 +162,12 @@ public class FrmColegio extends javax.swing.JFrame {
                                 .addComponent(btnGuardar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton1)
-                                .addGap(22, 22, 22)
-                                .addComponent(btnExportar)))
-                        .addGap(0, 65, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnExportar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSalir)))
+                        .addGap(0, 29, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -177,7 +187,8 @@ public class FrmColegio extends javax.swing.JFrame {
                     .addComponent(comboProgramas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar)
                     .addComponent(btnExportar)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(btnSalir))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
                 .addGap(38, 38, 38))
@@ -240,6 +251,12 @@ public class FrmColegio extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarEdadMayor();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     public void llenarCombo() {
         comboProgramas.removeAllItems();
@@ -402,6 +419,7 @@ public class FrmColegio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExportar;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> comboProgramas;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
